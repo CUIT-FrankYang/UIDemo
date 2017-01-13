@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:accordion="http://schemas.android.com/apk/res-auto/com.example.s420.uidemo"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.s420.uidemo.activity.Tabs.AccordingTab01">
+    <include android:id="@+id/headbar" layout="@layout/layout_header_back" />
+    <com.example.s420.uidemo.views.AccordionView
+        android:layout_below="@+id/headbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff5f5f5"
+        android:orientation="vertical"
+        accordion:header_layout_fold_button_id="@id/foldButton"
+        accordion:header_layout_id="@layout/accordion_header"
+        accordion:header_layout_label_id="@id/foldText"
+        accordion:section_bottom="@layout/accordion_footer"
+        accordion:section_container="@layout/accordion_section"
+        accordion:section_container_parent="@id/section_content"
+        accordion:section_headers="@array/accordion_sections"
+        accordion:section_visibility="@array/accordion_visibility">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 1" />
+
+        <LinearLayout
+            android:id="@+id/example_get_by_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 3" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 4" />
+
+    </com.example.s420.uidemo.views.AccordionView>
+</RelativeLayout>
